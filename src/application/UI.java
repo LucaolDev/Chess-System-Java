@@ -49,6 +49,13 @@ public class UI {
         }
     }
 
+    public static void printMatch(ChessMatch chessMatch) {
+        printBoard(chessMatch.getPieces());
+        System.out.println();
+        System.out.println("Turn: " + chessMatch.getTurn());
+        System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
+    }
+
     public static void printBoard(ChessPiece[][] pieces) {
         for (int i=0; i<pieces.length; i++) {
             System.out.print((8 - i) + " ");
